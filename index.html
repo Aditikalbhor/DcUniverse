@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC Superhero Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0a, #091f36); /* subtle dark background */
+      color: #e0e0e0;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(20, 20, 30, 0.75); /* modest semi-transparent panel */
+      padding: 40px 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffcc00; /* DC yellow */
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      color: #c0c0c0;
+    }
+
+    .start-btn {
+      border-radius: 10px;
+      background: rgba(158, 54, 58, 0.6); /* modest red */
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3em;
+      padding: 12px 30px;
+      transition: all 0.3s ease-in-out;
+      backdrop-filter: blur(4px);
+    }
+
+    .start-btn:hover {
+      background: rgba(255, 204, 0, 0.8); /* subtle yellow hover */
+      color: #000;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DC Superhero Memory Game</h1>
+    <p>Challenge your memory and match all the DC heroes before time runs out.</p>
+    <button class="start-btn" onclick="startGame()">Start Game</button>
+  </div>
+
+  <script>
+    function startGame() {
+      window.location.href = "game.html";
+    }
+  </script>
+</body>
+</html>

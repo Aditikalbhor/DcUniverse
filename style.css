@@ -1,0 +1,160 @@
+body {
+    background-image: url('https://i.pinimg.com/1200x/56/09/c6/5609c626263d0e056a53e650346c034a.jpg');
+    background-size: cover;
+    background-repeat: round;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+    color: #4f5f76;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #ffcc00; /* Bold comic yellow */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    letter-spacing: 3px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    color: #00e5ff; /* Cyan glow */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+#seconds, #tens {
+    font-size: 2em;
+    color: #751215;
+}
+
+button {
+    border-radius: 5px;
+    background: #0f2862;
+    color: #fff;
+    border: solid 1px #751215;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 12px 20px;
+    width: 200px;
+    margin: 15px auto;
+    outline: none;
+    display: block;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+    background: #9e363a;
+    border: solid 1px #9e363a;
+    color: #fff;
+}
+
+/* Game container */
+#container {
+    width: 650px;
+    margin: 10px auto;
+}
+
+#container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[data-view="card"] {
+    transform: rotateY(180deg);
+    width: 100px;
+    height: 140px;
+    border: solid 1px #091f36;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+
+    /* Transparent frosted look */
+    background: rgba(79, 95, 118, 0.4);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+.flipped {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+.reverse {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+.correct {
+    opacity: 0.5;
+    cursor: default;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+#restart {
+    border-radius: 5px;
+    background: rgba(158, 54, 58, 0.7); /* Redline with 70% opacity */
+    color: #fff;
+    border: solid 1px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 12px 20px;
+    width: 200px;
+    margin: 15px auto;
+    display: block;
+    transition: all 0.4s ease-in-out;
+
+    /* Frosted glass effect */
+    backdrop-filter: blur(6px);
+}
+
+#restart:hover {
+    background: rgba(255, 204, 0, 0.8); /* yellow hover with transparency */
+    color: #000;
+    border: solid 1px rgba(0, 0, 0, 0.8);
+}
+
+
+/* --- Superhero Cards --- */
+.correct[data-item="cat-woman"], .flipped[data-item="cat-woman"] {
+    background: url("https://i.pinimg.com/736x/2a/95/40/2a95403767cd5b1008b09989e9f8c330.jpg") center/cover no-repeat;
+}
+.correct[data-item="bat-man"], .flipped[data-item="bat-man"] {
+    background: url("https://i.pinimg.com/1200x/9e/87/a0/9e87a099e6e933648fa5121d162f7388.jpg") center/cover no-repeat;
+}
+.correct[data-item="beast-boy"], .flipped[data-item="beast-boy"] {
+    background: url("https://i.pinimg.com/1200x/51/0c/a6/510ca669dd857fcbde267a3d9c731b43.jpg") center/cover no-repeat;
+}
+.correct[data-item="raven"], .flipped[data-item="raven"] {
+    background: url("https://i.pinimg.com/1200x/d7/5a/f7/d75af77de40f6660e6e41414b5b131ed.jpg") center/cover no-repeat;
+}
+.correct[data-item="ww"], .flipped[data-item="ww"] {
+    background: url("https://i.pinimg.com/736x/6b/c0/45/6bc045361a6fc0308cf910919e3f27e2.jpg") center/cover no-repeat;
+}
+.correct[data-item="cyborg"], .flipped[data-item="cyborg"] {
+    background: url("https://i.pinimg.com/736x/5d/b6/30/5db6301ec2b7b38fa057f216cdf90de1.jpg") center/cover no-repeat;
+}
+.correct[data-item="robin"], .flipped[data-item="robin"] {
+    background: url("https://i.redd.it/y80z7lpmpjdd1.jpeg") center/cover no-repeat;
+}
+.correct[data-item="super-man"], .flipped[data-item="super-man"] {
+    background: url("https://static.posters.cz/image/750/21029.jpg") center/cover no-repeat;
+}
+.correct[data-item="aqua-man"], .flipped[data-item="aqua-man"] {
+    background: url("https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1338176106i/604304.jpg") center/cover no-repeat;
+}
+.correct[data-item="flash"], .flipped[data-item="flash"] {
+    background: url("https://static.dc.com/dc/files/default_images/Char_Thumb_Flash_20190116_5c3fcaaa18f023.90325986.jpg?w=160") center/cover no-repeat;
+}
